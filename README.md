@@ -3,7 +3,7 @@ Scratchpad for robotic modules
 
 Module 1: Ground Plane Detection
 Methodology:
-1. Median Weight Filter on RGBD
+1. Median Weight Filter on RGBD - Accomplished (to some extent)
 2. RGBD -> Point Cloud - Accomplished
 3. Occupancy grid construction
 4. Ground plane thresholding and segmentation
