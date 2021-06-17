@@ -8,7 +8,6 @@ set(CMAKE_CXX_FLAGS "-fpermissive")
 set(CMAKE_CXX_COMPILER /usr/bin/g++)
 set(CMAKE_BUILD_TYPE "Release")
 
-# put FindGLFW.cmake in the source directory of CMakeLists.txt
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED QUIET COMPONENTS core features filters io segmentation surface)
