@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
     cloud->width = cloud->points.size();
     cout<< "point cloud size = "<<cloud->points.size()<<endl;
     cloud->is_dense = false;
-    pcl::io::savePCDFile("/home/aditya/Desktop/Team Humanoid/robotics_ws/GroundPlane_detection/results/0062.pcd", *cloud);
+    pcl::io::savePCDFile("/home/aditya/Desktop/Team Humanoid/robotics_ws/GroundPlane_detection/test_images/0062.pcd", *cloud);
     
     cloud->points.clear();
     cout<< "point cloud saved."<<endl;
