@@ -2,6 +2,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
+#include <opencv2/ximgproc.hpp>
 
 #include <string>
 
@@ -89,7 +90,12 @@ int main(int argc, char *argv[])
 
     //Point3f test = cart_cood(camera, test_point, 3);
     
-    cout<<cam_matrix(1,2)<<" "<<cam_matrix(1,1);
+    // Data pre-processing
+    // Weight Median Filter
+    Mat F;
+    depth.convertTo(F, CV_8U);
+    depth.convertTo(depth, CV_32F);
+    ximgproc::weightedMedianFilter(F,depth,depth, 10);
 
     //create a null cloud using smart pointers.
     PointCloud::Ptr cloud(new PointCloud);
@@ -124,7 +130,7 @@ int main(int argc, char *argv[])
     cloud->width = cloud->points.size();
     cout<< "point cloud size = "<<cloud->points.size()<<endl;
     cloud->is_dense = false;
-    pcl::io::savePCDFile("/home/aditya/Desktop/Team Humanoid/robotics_ws/GroundPlane_detection/test_images/0062.pcd", *cloud);
+    pcl::io::savePCDFile("/home/aditya/Desktop/Team Humanoid/robotics_ws/GroundPlane_detection/results/0062.pcd", *cloud);
     
     cloud->points.clear();
     cout<< "point cloud saved."<<endl;
