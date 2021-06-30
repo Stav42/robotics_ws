@@ -1,4 +1,4 @@
-# Install script for directory: /home/aditya/Desktop/Team Humanoid/robotics_ws/GroundPlane_detection
+# Install script for directory: /home/aditya/Desktop/Team_Humanoid/robotics_ws/GroundPlane_detection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/aditya/Desktop/Team Humanoid/robotics_ws/GroundPlane_detection/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aditya/Desktop/Team_Humanoid/robotics_ws/GroundPlane_detection/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

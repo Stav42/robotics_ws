@@ -28,5 +28,5 @@ include_directories(
 
 file(GLOB sources "*.cpp")
 
-add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/src/detection.cpp)
+add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/src/detection.cpp) 
 target_link_libraries(GroundPlaneDetection ${OpenCV_LIBS} ${PCL_LIBRARIES})
